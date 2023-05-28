@@ -435,20 +435,21 @@ mv swrast_dri.so swrast_dri.bak
 ln -s /usr/lib/x86_64-linux-gnu/dri/vmwgfx_dri.so swrast_dri.so
 ```
 
-## Performance
+## Performance Metrics
 
-The performance of the raytracer is determined by measuring the time __T__ a combined intersection and reflection/refraction cycle takes for __N__ input rays and __M__ triangles in a scene. Because every ray has to search all triangles in a scene for a valid closest intersection, __N__ * __M__ gives the number of performed refractive intersections or, put differently, the number of rays that could be intersected and refracted if the scene consisted of one triangle. Thus a comparative measure of performance is __N__ * __M__ / __T__ given in "refractive intersections/s" or "RI/s".
+The effectiveness of our raytracer is gauged by assessing the duration, denoted as __T__, taken by an intersection and reflection/refraction cycle to process __N__ input rays and __M__ triangles in a scene. Given that each ray has to sift through all scene triangles to identify the closest valid intersection, the product __N__ * __M__ signifies the count of refractive intersections. In other words, it represents the number of rays that could potentially intersect and refract if the scene consisted of a solitary triangle. Thus, a significant benchmark for comparing performance is __N__ * __M__ / __T__, which is expressed in terms of "refractive intersections per second" or "RI/s".
 
-Here are some results from various platforms:
-<table>
-	<tr><td>Intel i5-8400</td>		<td>~ 0.5e9 RI/s</td></tr>
-	<tr><td>nVidia GTX460</td>	<td>~ 4.1e9 RI/s</td></tr>
-	<tr><td>nVidia GTX770</td>	<td>~ 9.9e9 RI/s</td></tr>
-    <tr><td>nVidia GTX1650 Max-Q</td>	<td>~ 22.3e9 RI/s</td></tr>
-    <tr><td>nVidia RTX3080 Ti</td>	<td>~ 130.1e9 RI/s</td></tr>
-</table>
+We present below some comparative performance results obtained from a variety of platforms:
 
-Performance results are printed in the console during simulation, so if you would like to share those results, drop me a line!
+| Platform | Performance (RI/s) |
+| --- | --- |
+| Intel i5-8400 | ~ 0.5e9 RI/s |
+| nVidia GTX460 | ~ 4.1e9 RI/s |
+| nVidia GTX770 | ~ 9.9e9 RI/s |
+| nVidia GTX1650 Max-Q | ~ 22.3e9 RI/s |
+| nVidia RTX3080 Ti | ~ 130.1e9 RI/s |
+
+During the simulation, performance outcomes are displayed in the console. If you wish to contribute your results, please don't hesitate to reach out!
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
