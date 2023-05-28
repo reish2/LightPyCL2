@@ -451,5 +451,5 @@ Here are some results from various platforms:
 
 Performance results are printed in the console during simulation, so if you would like to share those results, drop me a line!
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
