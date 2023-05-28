@@ -365,8 +365,7 @@ class CLTracer:
                 t_fresnell = time2 - time1
                 print("Fresnell processing time:      ", time2 - time1, "s")
                 print("Performance:                   ",
-                      (np.int64(part_ray_count_this_iter) * np.int64(tri_count)) / np.float128(
-                          t_fresnell + t_intersect + t_postproc), "RI/s")
+                      (np.float64(part_ray_count_this_iter) * np.float64(tri_count)) / np.float64(t_fresnell + t_intersect + t_postproc), "RI/s")
 
                 # FETCH RESULTS FROM CL DEV
                 print("Fetching results from device.")
