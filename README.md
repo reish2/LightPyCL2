@@ -442,10 +442,11 @@ The performance of the raytracer is determined by measuring the time __T__ a com
 
 Here are some results from various platforms:
 <table>
-	<tr><td>Intel i5</td>		<td>~ 0.5e9 RI/s</td></tr>
+	<tr><td>Intel i5-8400</td>		<td>~ 0.5e9 RI/s</td></tr>
 	<tr><td>nVidia GTX460</td>	<td>~ 4.1e9 RI/s</td></tr>
 	<tr><td>nVidia GTX770</td>	<td>~ 9.9e9 RI/s</td></tr>
     <tr><td>nVidia GTX1650 Max-Q</td>	<td>~ 22.3e9 RI/s</td></tr>
+    <tr><td>nVidia RTX3080 Ti</td>	<td>~ 130.1e9 RI/s</td></tr>
 </table>
 
 Performance results are printed in the console during simulation, so if you would like to share those results, drop me a line!
