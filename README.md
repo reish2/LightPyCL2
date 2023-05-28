@@ -1,5 +1,4 @@
-LightPyCL
-=========
+# LightPyCL2
 
 LightPyCL2 is an advanced physical 3D raytracer, harnessing the power of Python and PyOpenCL to provide high-performance computations. Its core purpose is to deliver accurate simulations of complex optical elements interacting within a variety of lighting scenarios, each with unique directional characteristics and configurations. Importantly, LightPyCL2's primary goal isn't to create aesthetically pleasing graphics, but rather to produce precise illumination maps in an efficient and effective manner.
 
