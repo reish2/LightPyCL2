@@ -1,7 +1,7 @@
 pyopencl[pocl]
 dxfwrite
 open3d
-open3d-cpu
+# open3d-cpu
 ezdxf
 triangle
 opencv-python
