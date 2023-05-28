@@ -6,3 +6,4 @@ ezdxf
 triangle
 opencv-python
 nptyping
+matplotlib
