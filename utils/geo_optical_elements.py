@@ -241,7 +241,6 @@ class GeoObject:
         # color
         color = self.mat_colors[self.mat_type]
 
-        # TODO: set color based on mesh type (measurement sruface vs. scene geometry)
         if return_wireframe:
             # Arrange the vertices to create lines
             triangles_l1 = np.stack((np.arange(len(m_v0)), len(m_v0) + np.arange(len(m_v0)))).transpose((1, 0))
