@@ -402,6 +402,40 @@ The files *example_directivity_dissipative_cube.py*, *example_directivity_lens.p
 
 in your favourite terminal emulator.
 
+## Known Issues
+### Open3D GLFW Error
+
+Issue:
+```bash
+[Open3D WARNING] GLFW Error: GLX: Failed to create context: GLXBadFBConfig
+[Open3D WARNING] Failed to create window
+[Open3D WARNING] [DrawGeometries] Failed creating OpenGL window.
+```
+
+Cause: No GPU available for rendering
+
+Fix: place the following at the begining of the main (or uncomment in main.py)
+```python
+import os
+os.environ['OPEN3D_CPU_RENDERING'] = 'true'  # Ubuntu 18.04
+```
+
+### libGL error with Virtual Box VM
+
+issue: libLLVM-10.so.1 can not be found
+```bash
+libGL error: MESA-LOADER: failed to open swrast: libLLVM-10.so.1: cannot open shared object file: No such file or directory (search paths /path/to/LightPyCL2/venv/lib/python3.10/site-packages/open3d, suffix _dri)
+libGL error: failed to load driver: swrast
+Segmentation fault (core dumped)
+```
+
+Fix: link libLLVM-10.so.1 to vmwgfx_dri.so instead
+```bash
+cd /path/to/LightPyCL2/venv/lib/python3.10/site-packages/open3d
+mv swrast_dri.so swrast_dri.bak
+ln -s /usr/lib/x86_64-linux-gnu/dri/vmwgfx_dri.so swrast_dri.so
+```
+
 ## Performance
 
 The performance of the raytracer is determined by measuring the time __T__ a combined intersection and reflection/refraction cycle takes for __N__ input rays and __M__ triangles in a scene. Because every ray has to search all triangles in a scene for a valid closest intersection, __N__ * __M__ gives the number of performed refractive intersections or, put differently, the number of rays that could be intersected and refracted if the scene consisted of one triangle. Thus a comparative measure of performance is __N__ * __M__ / __T__ given in "refractive intersections/s" or "RI/s".
@@ -411,6 +445,7 @@ Here are some results from various platforms:
 	<tr><td>Intel i5</td>		<td>~ 0.5e9 RI/s</td></tr>
 	<tr><td>nVidia GTX460</td>	<td>~ 4.1e9 RI/s</td></tr>
 	<tr><td>nVidia GTX770</td>	<td>~ 9.9e9 RI/s</td></tr>
+    <tr><td>nVidia GTX1650 Max-Q</td>	<td>~ 22.3e9 RI/s</td></tr>
 </table>
 
 Performance results are printed in the console during simulation, so if you would like to share those results, drop me a line!

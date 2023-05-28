@@ -19,6 +19,10 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+# For Open3D CPU rendering, uncomment the following two lines
+#import os
+#os.environ['OPEN3D_CPU_RENDERING'] = 'true'  # Ubuntu 18.04
+
 import numpy as np
 from utils import iterative_tracer as it, geo_optical_elements as goe
 from utils.Pose import Pose

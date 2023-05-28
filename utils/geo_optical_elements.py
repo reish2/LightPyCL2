@@ -19,9 +19,6 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import os
-os.environ['EGL_PLATFORM'] = 'surfaceless'   # Ubunu 20.04+
-os.environ['OPEN3D_CPU_RENDERING'] = 'true'  # Ubuntu 18.04
 import open3d as o3d
 
 import numpy as np
