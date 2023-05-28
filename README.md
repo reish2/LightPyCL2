@@ -108,8 +108,8 @@ python3 main.py
 ```
 
 If everything worked, you should see an Open3D window:
-![main_output1.png](images%2Fmain_output1.png)
-![main_output3.png](images%2Fmain_output3.png)
+![main_output1.png](images%2Fmain_output4.png)
+![main_output3.png](images%2Fmain_output5.png)
 
 Note the color coding. Magenta indicates measurment surfaces and cyan optical elements.
 The rays are coded from yellow (lower power) to red (higher power).
