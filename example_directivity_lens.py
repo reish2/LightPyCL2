@@ -52,7 +52,7 @@ def setup_mesh_elements() -> List[goe.GeoObject]:
     measure_surf.set_material(mat_type="measure")
     meshes = [measure_surf]
 
-    m2 = oe.lens_spherical_biconcave(focus=(0, 0, 0), r1=60., r2=6000., diameter=50.0, IOR=2.5)
+    m2 = oe.lens_spherical_biconcave(focus=(0, 0, 0), r1=60., r2=6000., diameter=50.0, IOR=1.5)
     m2.transform(Pose.from_axis_angle(np.array([0, 1, 0]) * -np.pi / 2.0, np.array([0, 0, 0])))
     meshes.append(m2)
 
