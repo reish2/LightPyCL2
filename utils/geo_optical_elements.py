@@ -365,9 +365,9 @@ class OpticalElements:
         N2 = max(N_min, int(np.pi / (2*self.mesh_angular_resolution)))
         phi2 = np.linspace(np.absolute(np.arcsin(d2 / r2)) + dphi2, 0.0, N2)
         xc_1 = z1 - r1 * np.cos(phi1)
-        yc_1 = r1 * np.sin(phi1)
+        yc_1 = np.abs(r1 * np.sin(phi1))
         xc_2 = z2 - r2 * np.cos(phi2)
-        yc_2 = r2 * np.sin(phi2)
+        yc_2 = np.abs(r2 * np.sin(phi2))
         xc = np.append(xc_1, xc_2)
         yc = np.append(yc_1, yc_2)
 
