@@ -4,6 +4,23 @@ LightPyCL2 is an advanced physical 3D raytracer, harnessing the power of Python 
 
 Released under the MIT license, LightPyCL2 is a freely available software. Its creators passionately offer it to the community with the hope that it will serve as a valuable tool for innovators, researchers, and enthusiasts in the field of optics and lighting simulation.
 
+## Examples
+
+The following are simulations of a spherical lens focusing a colimated beam using LightPyCL2.
+
+| ![example_lens1.PNG](images%2Fexample_lens1.PNG) | ![example_lens3.PNG](images%2Fexample_lens3.PNG) |
+|--------------------------------------------------|--------------------------------------------------|
+| ![example_lens4.PNG](images%2Fexample_lens4.PNG) | ![example_lens5.PNG](images%2Fexample_lens5.PNG) | 
+
+Observe the intensity variance between the focused beam (red) and the lesser-powered stray light (yellow).
+
+Next, we present simulations depicting a parabolic lens harboring a point light source at its focal point, along with cross-sectional views of a human eye model.
+
+| ![example_parabolic_mirror1.PNG](images%2Fexample_parabolic_mirror1.PNG) | ![example_eye1.PNG](images%2Fexample_eye1.PNG) |
+|--------------------------------------------------------------------------|------------------------------------------------| 
+| ![example_eye2.PNG](images%2Fexample_eye2.PNG)                           | ![example_eye3.PNG](images%2Fexample_eye3.PNG) |
+
+
 ## Features
 
 **Simplicity:**
